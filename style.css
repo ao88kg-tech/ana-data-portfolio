@@ -65,8 +65,28 @@ a {
 }
 
 .hero-content {
-  max-width: 850px;
-  padding-top: 120px;
+  max-width: 1180px;
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.hero-text-container {
+  max-width: 760px;
 }
 
 .eyebrow,
@@ -79,7 +99,7 @@ a {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.4rem, 6vw, 4.7rem);
   line-height: 1.02;
   margin: 14px 0 22px;
 }
@@ -228,6 +248,23 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 800px) {
   .nav {
     align-items: flex-start;
@@ -236,10 +273,6 @@ footer {
 
   .nav-links {
     flex-wrap: wrap;
-  }
-
-  .hero-content {
-    padding-top: 70px;
   }
 
   .project-grid,
